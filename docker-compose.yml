@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  ros2:
+    build: .
+    platform: linux/amd64
+    container_name: md25010_ros2
+    privileged: true
+    environment:
+      - DISPLAY=:1
+      - TURTLEBOT3_MODEL=waffle
+      - ROS_DOMAIN_ID=0
+      - LIBGL_ALWAYS_SOFTWARE=1
+      - GALLIUM_DRIVER=llvmpipe
+      - MESA_GL_VERSION_OVERRIDE=3.3
+      - GAZEBO_MODEL_PATH=/opt/ros/humble/share/turtlebot3_gazebo/models
+    volumes:
+      - ./src:/root/ros2_ws/src
+      - ./maps:/root/ros2_ws/maps
+    ports:
+      - "8080:8080"
+      - "5901:5901"
+    stdin_open: true
+    tty: true
+    command: >
+      bash -c "
+        mkdir -p ~/.vnc &&
+        echo 'password' | vncpasswd -f > ~/.vnc/passwd &&
+        chmod 600 ~/.vnc/passwd &&
+        vncserver :1 -geometry 1280x800 -depth 24 -localhost no &&
+        websockify --web=/usr/share/novnc 8080 localhost:5901 &
+        sleep 3 &&
+        bash
+      "
