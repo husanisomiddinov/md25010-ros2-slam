@@ -1,0 +1,6 @@
+label,goal_x,goal_y,status,elapsed_s,arrival_error_m
+goal_1,1.5,0.0,SUCCESS,135.22,0.04
+goal_2,1.5,1.5,SUCCESS,61.29,0.07
+goal_3,-1.0,1.5,SUCCESS,33.36,0.03
+goal_4,-1.0,-1.0,SUCCESS,78.36,0.11
+goal_5_home,0.0,0.0,SUCCESS,39.15,0.05
