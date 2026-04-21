@@ -109,10 +109,9 @@ class NavGoalSender(Node):
             writer.writerow(['label', 'goal_x', 'goal_y', 'status', 'elapsed_s', 'arrival_error_m'])
             writer.writerows(self._results)
         self.get_logger().info(f'saved to {path}')
-        print(f'\n{"label":<16} {"goal (x,y)":<16} {"status":<10} {"time(s)":<10} error(m)')
-        print('-' * 62)
+        print()
         for r in self._results:
-            print(f'{r[0]:<16} ({r[1]},{r[2]}){"":<7} {r[3]:<10} {str(r[4]):<10} {r[5]}')
+            print(f'{r[0]}  ({r[1]}, {r[2]})  {r[3]}  {r[4]}s  err={r[5]}m')
 
 
 def main():

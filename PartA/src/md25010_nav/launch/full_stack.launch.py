@@ -1,5 +1,4 @@
-# Convenience wrapper — same as nav2_amcl.launch.py.
-# Kept as a separate file so the submission has a single obvious entry point.
+# wrapper for nav2_amcl.launch.py
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
