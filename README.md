@@ -91,6 +91,20 @@ PartC/
 
 ---
 
+## Screenshots
+
+**Map building progress**
+
+![25% coverage](PartB/screenshots/screenshot1.png)
+![60% coverage](PartB/screenshots/screenshot2.png)
+![Full map](PartB/screenshots/screenshot3.png)
+
+**Autonomous navigation**
+
+![Navigation](PartB/screenshots/screenshot4.png)
+
+---
+
 ## Navigation results
 
 5/5 goals reached:
