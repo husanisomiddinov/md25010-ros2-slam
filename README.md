@@ -1,4 +1,4 @@
-# MD25010 — ROS2 SLAM
+# ROS2 SLAM
 
 Intern onboarding task for grant project MD25010 at New Uzbekistan University. The task was basically to get a full SLAM + autonomous navigation pipeline running using ROS2 and Nav2, using a TurtleBot3 in Gazebo simulation.
 
